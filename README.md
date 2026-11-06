@@ -120,7 +120,7 @@ comando usato "composer update nette/schema nette/utils -W"
 Modificate line di codice in config\database.php e vendor\laravel\framework\config\database.php
 "PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA')" -> "\Pdo\Mysql::ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA')"
 
-**Risoluzione compito:**
+**Risoluzione Broken Access Control:**
 
 - Modificato la uri specifica del profilo in una generica "profilo"
 - Pulsanti modifcia e ellimina articolo nella show:
@@ -129,3 +129,7 @@ Modificate line di codice in config\database.php e vendor\laravel\framework\conf
   - Form per la destroy dell articolo e nuova rotta associata con metodo delete
 - pulsante delete nella user profile /profile protetto con form
 - Protetta le rotte dell admin con un midleware
+- 
+**Risoluzione Cryptographic Failures:**
+- modifica metodo di hashing da md5 a sha256, per le immagini degli avatar(profilo)
+- aggiunto utilizzo di pepper e salting per la password
